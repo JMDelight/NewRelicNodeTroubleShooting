@@ -2,3 +2,11 @@ Bob- I seem to be having trouble with installing the new relic node.js agent.  I
 Joel- I'd be glad to help you with that, if you could share the newrelic_agent.log file with me I will help you figure out what is going on.
 Bob- I don't have a log file, here is a link to my project's source code that you can look at- https://github.com/JMDelight/NewRelicNodeTroubleShooting.git
 Joel- Alright, I can see one problem so far, you should make the first line of your startup script, app.js, be "require('newrelic');"
+Bob- Thank you that fixed it, I am now receiving information in the dashboard.
+...
+Bob- Hey Joel, I just got an email alert for my webapp saying that my appdex score was critical, what does this mean?
+Joel- The Apdex is supposed to be a way to guess how a user will feel when working with your application.  It is measuring the response time, or how long a user has to wait for your application to respond. You can read more about it here: https://docs.newrelic.com/docs/apm/new-relic-apm/apdex/apdex-measuring-user-satisfaction
+You can also set that threshold to whatever number you want by navigating to the settings section of your dashboard. Detailed instructions about it can be found here: https://docs.newrelic.com/docs/apm/new-relic-apm/apdex/change-your-apdex-settings
+If you go to the dashboard for your application and set the time to cover the interval in which this alert happened, you can probably get a better understanding of exactly what was causing the apdex score to go critical.
+If you look at the transactions section in the monitoring section of the sidebar, you should be able to look into further details for the web requests and see exactly which operation is causing the transaction to take too long.
+Bob- Thanks, that is pretty amazing. I think I have figured out what was causing the trouble.
