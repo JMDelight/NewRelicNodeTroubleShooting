@@ -1,0 +1,3 @@
+Bob- I seem to be having trouble with installing the new relic node.js agent.  I tried to install it, but I am not getting any data on my dashboard.
+Joel- I'd be glad to help you with that, if you could share the newrelic_agent.log file with me I will help you figure out what is going on.
+Bob- I don't have a log file, here is a link to my project's source code that you can look at- https://github.com/JMDelight/NewRelicNodeTroubleShooting.git
